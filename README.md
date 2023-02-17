@@ -2,7 +2,7 @@
 Navigation stack for the ErgoCub project
 
 # Run the First Year Demo Docker
-To use the demo is enough to execute the `run.sh` script present in this repo     
+To use the demo is enough to execute the `run.sh` script present in this repo (if you are using windows you have to modify the run script to allow the use of gpu)     
 
 If you don't have Docker installed, follow this [link](https://docs.docker.com/get-docker/) on how to install it
 
