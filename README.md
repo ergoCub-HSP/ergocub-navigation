@@ -1,5 +1,6 @@
 # ergocub-navigation
 Navigation stack for the ErgoCub project
+New Docker ready `simonemiche/ergocub_ros2:ecub_first_year_demo` to use `ergoCubGazeboV1`. To run it just change the TAG variable in the `run.sh`
 
 # Run the First Year Demo Docker
 To use the demo is enough to execute the `run.sh` script present in this repo (if you are using windows you have to modify the run script to allow the use of gpu)     
