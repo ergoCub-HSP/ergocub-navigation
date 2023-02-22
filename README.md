@@ -25,8 +25,18 @@ Type in order each one of the following instruction in a separate terminal:
   >> startWalking
   ```
 ### Navigation Stack Setup
-IMPORTANT: you have to source the proper ros2 workspaces for EACH terminal. Type the commands `ros2_setup` and `nav2_setup`.
+## ergoCubGazeboV1 -> from image tag `ecub_first_year_demo` (default)
+Type in order each one of the following instruction in a separate terminal:
 
+* `launch_localization_setup` starts the map server and AMCL.
+* `launch_robot_setup` starts Rviz and necessary ros2 nodes for scan filtering, odometry, TFs and frame projection.
+* `launch_planner_trigger` for synchronizing the nav2 stack BT with the walking-controller.
+* `launch_navigation` launches the rest of the nav2 stack, with the global planner, costmaps and BT navigator
+* `launch_talker` is the node that transforms and converts the global path to the walking-controller.
+* (optional) `ros2 launch ergoCub_ros2 footprints_viewer.launch.py` for viewing the planned footprints on RViz.
+
+## Stickbot Setup -> from image tag `first_year_demo`
+IMPORTANT: you have to source the proper ros2 workspaces for EACH terminal. Type the commands `ros2_setup` and `nav2_setup`.
 Type in order each one of the following instruction in a separate terminal with the commands `ros2_setup` and `nav2_setup`:
 * `ros2 launch ergoCub_ros2 setup_localization.launch.py` starts the map server and AMCL.
 * `ros2 launch ergoCub_ros2 setup_robot.launch.py` starts Rviz and necessary ros2 nodes for scan filtering, odometry, TFs and frame projection.
@@ -35,3 +45,13 @@ Type in order each one of the following instruction in a separate terminal with 
 * `ros2 run ergoCub_ros2 async_walking_controller_talker` is the node that transforms and converts the global path to the walking-controller.
 
 ## Use the Navigation Stack
+Once all the previous commands have been successfully launched, you'll face RViz interface
+![Screenshot from 2023-02-22 18-28-29](https://user-images.githubusercontent.com/86918431/220708393-9714f04c-4bd0-4ab9-9bc1-f3fd8ffade80.png)
+
+Then select the button ![Screenshot from 2023-02-22 18-30-32](https://user-images.githubusercontent.com/86918431/220708895-2224bb3b-e04e-4700-887b-adee79572faf.png) to set the initial position of the robot and click on the position on the map.
+You will see the initialization of AMCL with the green particle swarm around the robot.
+
+![Screenshot from 2023-02-22 18-31-35](https://user-images.githubusercontent.com/86918431/220709132-d0c03cce-b0ac-4066-9a85-fc9dd37b1a3c.png)
+
+To navigate, select the button ![Screenshot from 2023-02-22 18-30-46](https://user-images.githubusercontent.com/86918431/220709487-d8178780-fb66-452f-902f-f8850e2dfddb.png) and then the goal pose that you want on the map.
+
