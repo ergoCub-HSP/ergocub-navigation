@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME=simonemiche/ergocub_ros2 # replace by the name of your image
-TAG=first_year_demo # the tag of your built image
+TAG=ecub_first_year_demo # the tag of your built image (ecub_first_year_demo for ergoCubGazeboV1 or first_year_demo for stickBot)
 
 sudo xhost +
 sudo docker run \
