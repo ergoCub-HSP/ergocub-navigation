@@ -1,5 +1,6 @@
 # ergocub-navigation
 Navigation stack for the ErgoCub project
+
 New Docker ready `simonemiche/ergocub_ros2:ecub_first_year_demo_release` to use `ergoCubGazeboV1`.
 
 # Run the First Year Demo Docker
@@ -46,4 +47,3 @@ You will see the initialization of AMCL with the green particle swarm around the
 ![Screenshot from 2023-02-22 18-31-35](https://user-images.githubusercontent.com/86918431/220709132-d0c03cce-b0ac-4066-9a85-fc9dd37b1a3c.png)
 
 To navigate, select the button ![Screenshot from 2023-02-22 18-30-46](https://user-images.githubusercontent.com/86918431/220709487-d8178780-fb66-452f-902f-f8850e2dfddb.png) and then the goal pose that you want on the map.
-
